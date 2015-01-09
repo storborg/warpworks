@@ -1,0 +1,76 @@
+<%inherit file="base.html"/>
+
+
+<%def name="title()">Draft Editor</%def>
+
+
+<section class="section-menu">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu-file" data-toggle="dropdown" aria-expanded="true">
+              File
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-file">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Open</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Save</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Save a Copy</a></li>
+              <li class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Download as WIF</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Download as PNG</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Download as SVG</a></li>
+              <li class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Print</a></li>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu-edit" data-toggle="dropdown" aria-expanded="true">
+              Edit
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-file">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Undo</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Redo</a></li>
+              <li class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Change History</a></li>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu-edit" data-toggle="dropdown" aria-expanded="true">
+              Tools
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu-file">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Material Usage</a></li>
+              <li class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reduce Shafts</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reduce Treadles</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Simplify Treadling</a></li>
+              <li class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Weave Instructions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+##<section class="section-draft">
+##  ${draft_svg | n}
+##</section>
+
+<script>
+  window.draft = ${draft_json | n};
+</script>
+
+<section class="section-draft">
+</section>

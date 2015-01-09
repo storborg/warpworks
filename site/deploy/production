@@ -1,0 +1,2 @@
+[webservers]
+www.warpworks.org ansible_ssh_user=deploy

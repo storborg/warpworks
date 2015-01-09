@@ -1,0 +1,19 @@
+<%inherit file="base.html"/>
+
+
+<%def name="title()">About ${request.registry.settings['name']}</%def>
+
+
+<section class="section-about">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+      <h3>About This Site</h3>
+      <p>I created ${request.registry.settings['name']} out of a shared interest in weaving, textiles, manufacturing history, and computation. I'm only a novice weaver, but as soon as I threw the first pick I knew I would want to be able to explore weaving in software.</p>
+      <p>The goal of the site is to make it possible for anyone to explore computer-aided textile design quickly and easily. It is built on top of a piece of software called <a href="http://pyweaving.rtfd.org">PyWeaving</a>, which is a low-level library for loading, manipulating, and rendering weave drafts.</p>
+      <p>Please keep in mind that this is a side project, and offered as a free service to the community. It may have bugs and problems!</p>
+      <p>Thanks,</p>
+      <p>Scott Torborg</p>
+      <p><a href="http://www.scotttorborg.com">scotttorborg.com</a></p>
+    </div>
+  </div>
+</section>

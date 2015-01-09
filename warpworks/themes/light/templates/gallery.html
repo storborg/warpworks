@@ -1,0 +1,27 @@
+<%inherit file="base.html"/>
+
+
+<%def name="title()">Draft Gallery</%def>
+
+
+<section class="section-gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Draft Gallery</h2>
+      </div>
+    </div>
+
+    % for row in h.grouper(4, drafts):
+      <div class="row">
+        % for draft in row:
+          <div class="col-sm-3">
+            <div class="draft-tile">
+              ${draft.img(request, 'draft-gallery')}
+            </div>
+          </div>
+        % endfor
+      </div>
+    % endfor
+  </div>
+</section>
